@@ -6,7 +6,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
         fields = ['url', 'username', 'email', 'groups']
-        
+
 
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
@@ -15,6 +15,6 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['url', 'name']
 
 class TaskSerializer(serializers.HyperlinkedModelSerializer):
-    class MetaL:
+    class Meta:
         model = Task
         fields = '__all__'
