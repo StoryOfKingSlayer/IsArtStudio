@@ -9,6 +9,7 @@ router.register(r'groups', views.GroupViewSet)
 router.register(r'tasks', views.TaskViewSet)
 router.register(r'projects', views.ProjectViewSet)
 router.register(r'check-lists', views.CheckListViewSet)
+
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [

@@ -4,8 +4,11 @@ from django.shortcuts import render
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
-from .serializers import UserSerializer, GroupSerializer, TaskSerializer, ProjectSerializer, CheckListSerializer, ProfileSerializer
+from .serializers import UserSerializer, GroupSerializer, TaskSerializer, ProjectSerializer, CheckListSerializer, \
+    ProfileSerializer
 from .models import Task, Project, CheckList, Profile
+
+
 
 class ProfileViewSet(viewsets.ModelViewSet):
     queryset = Profile.objects.all()
@@ -26,7 +29,7 @@ class ProjectViewSet(viewsets.ModelViewSet):
 
 
 class CheckListViewSet(viewsets.ModelViewSet):
-    queryset = CheckList.objects.all()
+    queryset = CheckList.objects.all().filter()
     serializer_class = CheckListSerializer
     permission_classes = [permissions.IsAuthenticated]
 
